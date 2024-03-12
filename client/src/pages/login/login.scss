@@ -16,7 +16,7 @@
     .left {
       flex: 1;
       background: linear-gradient(rgba(39, 11, 96, 0.5), rgba(39, 11, 96, 0.5)),
-        url("https://images.pexels.com/photos/3228727/pexels-photo-3228727.jpeg?auto=compress&cs=tinysrgb&w=1600")
+        url("https://img.freepik.com/free-photo/happy-friends-looking-social-media-smartphone_53876-102034.jpg?t=st=1710258363~exp=1710261963~hmac=25724d2dc51cb645d29039a6b05661679c20753d9b3c9edd5b253ac1ee13c935&w=1060")
           center;
       background-size: cover;
       padding: 50px;
@@ -29,14 +29,11 @@
         font-size: 100px;
         line-height: 100px;
       }
-      
-      p {
-      }
 
       span {
         font-size: 14px;
       }
-      
+
       button {
         width: 50%;
         padding: 10px;
@@ -57,20 +54,21 @@
       justify-content: center;
 
       h1 {
-      color: #555;
+        color: #555;
       }
-      
+
       form {
         display: flex;
         flex-direction: column;
         gap: 30px;
-        
+
         input {
-        border: none;
-        border-bottom: 1px solid lightgray;
-        padding: 20px 10px;
+          border: none;
+          border-bottom: 1px solid lightgray;
+          padding: 20px 10px;
+          outline: none;
         }
-        
+
         button {
           width: 50%;
           padding: 10px;

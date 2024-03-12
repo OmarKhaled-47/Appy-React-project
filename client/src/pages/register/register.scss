@@ -17,7 +17,7 @@
     .left {
       flex: 1;
       background: linear-gradient(rgba(39, 11, 96, 0.5), rgba(39, 11, 96, 0.5)),
-        url("https://images.pexels.com/photos/4881619/pexels-photo-4881619.jpeg?auto=compress&cs=tinysrgb&w=1600")
+        url("https://img.freepik.com/free-photo/three-young-people-using-different-social-media-websites-their-mobile-phone_23-2147841167.jpg?t=st=1710258069~exp=1710261669~hmac=27f52074810b255d5da3c92e3c9cc0e3a06d09a2f44de2ebeb7d8916f045fdfc&w=1380")
           center;
       background-size: cover;
       padding: 50px;
@@ -30,14 +30,15 @@
         font-size: 100px;
         line-height: 100px;
       }
-      
-      p {
+      a {
+        font-weight: 500;
+        color: #efeff3;
+        text-decoration: none;
       }
-
       span {
         font-size: 14px;
       }
-      
+
       button {
         width: 50%;
         padding: 10px;
@@ -58,20 +59,21 @@
       justify-content: center;
 
       h1 {
-      color: #555;
+        color: #555;
       }
-      
+
       form {
         display: flex;
         flex-direction: column;
         gap: 30px;
-        
+
         input {
-        border: none;
-        border-bottom: 1px solid lightgray;
-        padding: 20px 10px;
+          border: none;
+          border-bottom: 1px solid lightgray;
+          padding: 20px 10px;
+          outline: none;
         }
-        
+
         button {
           width: 50%;
           padding: 10px;
