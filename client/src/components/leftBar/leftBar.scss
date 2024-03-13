@@ -9,8 +9,8 @@
     overflow: scroll;
     background-color: themed("bg");
     color: themed("textColor");
-
-    @include mobile{
+    overflow: hidden;
+    @include mobile {
       display: none;
     }
 

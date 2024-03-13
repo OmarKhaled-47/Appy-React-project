@@ -16,6 +16,7 @@ import { useContext } from "react";
 import { DarkModeContext } from "./context/darkModeContext";
 import { AuthContext } from "./context/authContext";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import RightBar from "./components/rightBar/RightBar";
 
 function App() {
   const { currentUser } = useContext(AuthContext);
@@ -34,6 +35,7 @@ function App() {
             <div style={{ flex: 10 }}>
               <Outlet />
             </div>
+            <RightBar />
           </div>
         </div>
       </QueryClientProvider>

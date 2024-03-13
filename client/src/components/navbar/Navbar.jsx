@@ -1,17 +1,15 @@
 import "./navbar.scss";
-import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
-import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
-import WbSunnyOutlinedIcon from "@mui/icons-material/WbSunnyOutlined";
-import GridViewOutlinedIcon from "@mui/icons-material/GridViewOutlined";
-import NotificationsOutlinedIcon from "@mui/icons-material/NotificationsOutlined";
-import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
-import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { DarkModeContext } from "../../context/darkModeContext";
 import { AuthContext } from "../../context/authContext";
-
+import HomeRoundedIcon from "@mui/icons-material/HomeRounded";
+import DarkModeRoundedIcon from "@mui/icons-material/DarkModeRounded";
+import WidgetsRoundedIcon from "@mui/icons-material/WidgetsRounded";
+import LightModeRoundedIcon from "@mui/icons-material/LightModeRounded";
+import NotificationsRoundedIcon from "@mui/icons-material/NotificationsRounded";
+import PersonRoundedIcon from "@mui/icons-material/PersonRounded";
 const Navbar = () => {
   const { toggle, darkMode } = useContext(DarkModeContext);
   const { currentUser } = useContext(AuthContext);
@@ -19,29 +17,38 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <div className="left">
-        <Link to="/" style={{ textDecoration: "none" }}>
+        <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
           <span>Appy</span>
         </Link>
-        <HomeOutlinedIcon />
+        <HomeRoundedIcon />
         {darkMode ? (
-          <WbSunnyOutlinedIcon onClick={toggle} />
+          <LightModeRoundedIcon onClick={toggle} />
         ) : (
-          <DarkModeOutlinedIcon onClick={toggle} />
+          <DarkModeRoundedIcon onClick={toggle} />
         )}
-        <GridViewOutlinedIcon />
+        <WidgetsRoundedIcon />
         <div className="search">
           <SearchOutlinedIcon />
           <input type="text" placeholder="Search..." />
         </div>
       </div>
       <div className="right">
-        <PersonOutlinedIcon />
-        <EmailOutlinedIcon />
-        <NotificationsOutlinedIcon />
-        <div className="user">
-          <img src={"/upload/" + currentUser.profilePic} alt="" />
-          <span>{currentUser.name}</span>
-        </div>
+        <Link
+          to={`/profile/${currentUser.id}`}
+          style={{ textDecoration: "none", color: "inherit" }}
+        >
+          <PersonRoundedIcon />
+        </Link>
+        <NotificationsRoundedIcon />
+        <Link
+          to={`/profile/${currentUser.id}`}
+          style={{ textDecoration: "none", color: "inherit" }}
+        >
+          <div className="user">
+            <img src={"/upload/" + currentUser.profilePic} alt="" />
+            <span>{currentUser.name}</span>
+          </div>
+        </Link>
       </div>
     </div>
   );
